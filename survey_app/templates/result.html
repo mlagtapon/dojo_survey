@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Info</title>
+<style>
+    body{
+    background-color: salmon;
+    color: wheat;
+    }
+
+    h2 {
+        text-decoration: underline;
+    }
+
+    table {
+        padding: 20px;
+        font-size: 25px;
+    }
+
+    td {
+        padding-right: 30px;
+    }
+    
+    button {
+        padding: 10px;
+        margin: 20px;
+        border-radius: 10px;
+        background-color: wheat;
+        color: salmon;
+        font-size: 20px;
+        margin-left: 30%;
+    }
+
+</style>
+</head>
+<body>
+    <h1>Submitted Info</h1>
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>{{ name }}</td>
+        </tr>
+        <tr>
+            <td>Dojo Location:</td>
+            <td>{{ location }}</td>
+        </tr>
+        <tr>
+            <td>Favorite Language:</td>
+            <td>{{ language }}</td>
+        </tr>
+        <tr>
+            <td>Favorite Dessert:</td>
+            <td>{{ dessert }}</td>
+        </tr>
+        <tr>
+            <td>Preffered Candy:</td>
+            <td>{{ candy }}</td>
+        </tr>
+        <tr>
+            <td>Comment:</td>
+            <td>{{ comment }}</td>
+        </tr>
+    </table>
+    <br>
+
+    <a href="/"><button>Go Back</button></a>
+</body>
+</html>

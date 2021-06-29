@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>Dojo Survey</h1><br>
+            <form action="/result" method="post">
+            {% csrf_token %}
+            <div class="spaces">Your Name: <input type="text" name="name"></div><br>
+
+            <div class="spaces">Dojo Location:
+            <input list="dojo_location" name="location">
+            <datalist id="dojo_location">
+                <option value="Dallas"></option>
+                <option value="Chicago"></option>
+                <option value="Tulsa"></option>
+                <option value="San Jose"></option>
+                <option value="Bellevue"></option>
+                <option value="Boise"></option>
+                <option value="Arlington"></option>
+                <option value="LA"></option>
+                <option value="Oakland"></option>
+                <option value="Orange County"></option>
+            </datalist></div><br/>
+
+            <div class="spaces">Favorite Language:
+            <input list="language" name="language">
+            <datalist id="language">
+                <option value="Python"></option>
+                <option value="Java"></option>
+                <option value="C"></option>
+                <option value="Ruby"></option>
+                <option value="C#"></option>
+                <option value="PHP"></option>
+                <option value="JavaScript"></option>
+            </datalist></div><br/>
+
+            Favorite dessert?<br>
+            <input type="radio" id="donut" name="dessert" value="Donuts">
+            <label for="donuts">Donuts</label>
+            <input type="radio" id="cupcake" name="dessert" value="Cupcakes">
+            <label for="cupcakes">Cupcakes</label>
+            <input type="radio" id="cheesecake" name="dessert" value="Cheesecakes">
+            <label for="cheesecakes">Cheesecakes</label><br><br>
+
+            Favorite teacher or teachers?<br>
+            <input type="checkbox" id="anne" name="teacher" value="Anne Jurack">
+            <label for="anne">Anne Jurack</label><br>
+            <input type="checkbox" id="adrien" name="teacher" value="Adrien Dion">
+            <label for="adrien">Adrien Dion</label><br>
+            <input type="checkbox" id="phil" name="teacher" value="Phil Krull">
+            <label for="phil">Phil Krull</label><br><br>
+
+            <label for="comment"><p>Comment (optional):</p></label><br>
+            <textarea id="comment" name="comment" rows="5" cols="50">
+                Hello
+            </textarea><br>
+
+        <form action="/result" method="post">
+            <input type="submit" id="done" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
